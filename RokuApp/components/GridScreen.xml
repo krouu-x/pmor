@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="GridScreen" extends="Group">
+    <interface>
+        <field id="mode" type="string" onChange="onMode" />
+        <field id="request" type="assocarray" />
+        <function name="focusMe" />
+    </interface>
+    <children>
+        <Label id="head" translation="[40,40]" width="1500" font="font:MediumBoldSystemFont" color="#FFFFFF" />
+        <MiniKeyboard id="kb" translation="[40,130]" visible="false" />
+        <LabelList id="glist" translation="[40,130]" itemSize="[340,56]" numRows="12" visible="false" />
+        <MarkupGrid id="grid" translation="[420,120]" itemComponentName="PosterCard" numColumns="4" numRows="2" itemSize="[240,400]" itemSpacing="[20,20]" />
+        <Label id="msg" translation="[440,140]" width="1000" wrap="true" font="font:MediumSystemFont" color="#A0A0AA" />
+        <Timer id="deb" duration="0.5" repeat="false" />
+    </children>
+    <script type="text/brightscript" uri="pkg:/components/GridScreen.brs" />
+    <script type="text/brightscript" uri="pkg:/source/config.brs" />
+    <script type="text/brightscript" uri="pkg:/source/cache.brs" />
+    <script type="text/brightscript" uri="pkg:/source/navigation.brs" />
+</component>

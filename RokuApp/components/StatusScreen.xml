@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="StatusScreen" extends="Group">
+    <interface>
+        <field id="target" type="assocarray" onChange="onTarget" />
+        <field id="request" type="assocarray" />
+        <function name="focusMe" />
+    </interface>
+    <children>
+        <Rectangle color="#101014" width="1920" height="1080" />
+        <Label translation="[80,40]" text="Server status" font="font:LargeBoldSystemFont" color="#FFFFFF" />
+        <Label id="body" translation="[80,130]" width="1760" height="780" wrap="true" lineSpacing="4" font="font:SmallestSystemFont" color="#D0D0D8" />
+        <Button id="refresh" translation="[80,940]" text="Refresh" minWidth="280" maxWidth="280" height="56" />
+    </children>
+    <script type="text/brightscript" uri="pkg:/components/StatusScreen.brs" />
+    <script type="text/brightscript" uri="pkg:/source/config.brs" />
+    <script type="text/brightscript" uri="pkg:/source/navigation.brs" />
+</component>

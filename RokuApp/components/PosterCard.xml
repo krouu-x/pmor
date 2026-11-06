@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="PosterCard" extends="Group">
+    <interface>
+        <field id="itemContent" type="node" onChange="onContent" />
+        <field id="width" type="float" />
+        <field id="height" type="float" />
+    </interface>
+    <children>
+        <Poster id="poster" translation="[10,8]" width="210" height="315" loadDisplayMode="scaleToZoom" loadingBitmapUri="pkg:/images/placeholder.png" failedBitmapUri="pkg:/images/placeholder.png" />
+        <Label id="t" translation="[10,326]" width="210" font="font:SmallBoldSystemFont" color="#FFFFFF" />
+        <Label id="s" translation="[10,360]" width="210" font="font:SmallestSystemFont" color="#A0A0AA" />
+    </children>
+    <script type="text/brightscript" uri="pkg:/components/PosterCard.brs" />
+</component>

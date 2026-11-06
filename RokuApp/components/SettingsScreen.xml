@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="SettingsScreen" extends="Group">
+    <interface>
+        <field id="mode" type="string" />
+        <field id="request" type="assocarray" />
+        <function name="focusMe" />
+    </interface>
+    <children>
+        <Label translation="[40,40]" text="Settings" font="font:LargeBoldSystemFont" color="#FFFFFF" />
+        <LabelList id="opts" translation="[40,140]" itemSize="[500,60]" numRows="4" />
+        <Label id="status" translation="[40,400]" width="1200" font="font:MediumSystemFont" color="#FFC107" />
+        <Label translation="[40,480]" width="1200" wrap="true" font="font:SmallSystemFont" color="#A0A0AA" text="This product uses the TMDB API but is not endorsed or certified by TMDB.  Metadata browser only: no video playback.  Version 1.0" />
+    </children>
+    <script type="text/brightscript" uri="pkg:/components/SettingsScreen.brs" />
+    <script type="text/brightscript" uri="pkg:/source/config.brs" />
+    <script type="text/brightscript" uri="pkg:/source/cache.brs" />
+    <script type="text/brightscript" uri="pkg:/source/navigation.brs" />
+</component>

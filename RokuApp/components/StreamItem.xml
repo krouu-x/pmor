@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="StreamItem" extends="Group">
+    <interface>
+        <field id="itemContent" type="assocarray" />
+    </interface>
+    <children>
+        <Rectangle id="bg" color="#2A2A3A" width="720" height="60" />
+        <Rectangle id="focusBg" color="#FFC107" width="720" height="60" opacity="0" />
+        <Label id="titleLabel" translation="[20,10]" width="680" height="40" font="font:MediumSystemFont" color="#FFFFFF" wrap="true" maxLines="2" />
+    </children>
+    <script type="text/brightscript" uri="pkg:/components/StreamItem.brs" />
+</component>

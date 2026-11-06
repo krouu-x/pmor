@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="PlayerScreen" extends="Group">
+    <interface>
+        <field id="target" type="assocarray" onChange="onTarget" />
+        <field id="request" type="assocarray" />
+        <function name="focusMe" />
+        <function name="stopPlayback" />
+    </interface>
+    <children>
+        <Rectangle color="#000000" width="1920" height="1080" />
+        <Video id="video" width="1920" height="1080" enableUI="false" />
+        <Label id="pauseLbl" text="Paused" visible="false" translation="[0,500]" width="1920" horizAlign="center" font="font:LargeBoldSystemFont" color="#FFFFFF" />
+        <Group id="seekUI" visible="false">
+            <Rectangle color="#000000" opacity="0.6" translation="[0,900]" width="1920" height="180" />
+            <Rectangle color="#55555F" translation="[160,960]" width="1600" height="10" />
+            <Rectangle id="fill" color="#E50914" translation="[160,960]" width="0" height="10" />
+            <Label id="timeLbl" translation="[160,990]" width="900" font="font:MediumSystemFont" color="#FFFFFF" />
+            <Label id="speedLbl" translation="[1000,990]" width="760" horizAlign="right" font="font:MediumBoldSystemFont" color="#FFC107" />
+        </Group>
+        <Label id="msg" translation="[80,480]" width="1760" wrap="true" font="font:MediumSystemFont" color="#FF8A80" />
+        <Timer id="hideTimer" duration="1.5" repeat="false" />
+        <Timer id="saveTimer" duration="15" repeat="true" />
+        <Timer id="tick" duration="0.1" repeat="true" />
+    </children>
+    <script type="text/brightscript" uri="pkg:/components/PlayerScreen.brs" />
+    <script type="text/brightscript" uri="pkg:/source/config.brs" />
+    <script type="text/brightscript" uri="pkg:/source/cache.brs" />
+    <script type="text/brightscript" uri="pkg:/source/navigation.brs" />
+</component>

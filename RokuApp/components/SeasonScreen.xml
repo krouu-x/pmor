@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="SeasonScreen" extends="Group">
+    <interface>
+        <field id="target" type="assocarray" onChange="onTarget" />
+        <field id="request" type="assocarray" />
+        <function name="focusMe" />
+    </interface>
+    <children>
+        <Rectangle color="#101014" width="1920" height="1080" />
+        <Poster id="poster" translation="[80,60]" width="280" height="420" loadDisplayMode="scaleToZoom" />
+        <Label id="sname" translation="[400,60]" width="1440" font="font:LargeBoldSystemFont" color="#FFFFFF" />
+        <Label id="smeta" translation="[400,135]" width="1440" font="font:SmallSystemFont" color="#FFC107" />
+        <Label id="sover" translation="[400,185]" width="1440" height="120" wrap="true" maxLines="3" lineSpacing="6" font="font:SmallSystemFont" color="#D0D0D8" />
+        <LabelList id="list" translation="[400,330]" itemSize="[560,56]" numRows="11" />
+        <Poster id="still" translation="[1020,330]" width="640" height="360" loadDisplayMode="scaleToZoom" />
+        <Label id="etitle" translation="[1020,705]" width="820" font="font:MediumBoldSystemFont" color="#FFFFFF" />
+        <Label id="emeta" translation="[1020,755]" width="820" font="font:SmallSystemFont" color="#FFC107" />
+        <Label id="eover" translation="[1020,800]" width="820" height="130" wrap="true" maxLines="4" lineSpacing="6" font="font:SmallSystemFont" color="#D0D0D8" />
+        <Button id="play" translation="[1020,945]" text="Play Trailer" minWidth="280" maxWidth="280" height="56" />
+        <Label id="pmsg" translation="[1320,955]" width="540" height="60" wrap="true" maxLines="2" font="font:SmallestSystemFont" color="#FF8A80" />
+        <Label id="msg" translation="[400,330]" width="1200" wrap="true" font="font:MediumSystemFont" color="#FF8A80" />
+        <Label id="attr" translation="[80,1035]" width="1700" font="font:SmallestSystemFont" color="#6A6A78" text="This product uses the TMDB API but is not endorsed or certified by TMDB." />
+    </children>
+    <script type="text/brightscript" uri="pkg:/components/SeasonScreen.brs" />
+    <script type="text/brightscript" uri="pkg:/source/config.brs" />
+    <script type="text/brightscript" uri="pkg:/source/navigation.brs" />
+</component>

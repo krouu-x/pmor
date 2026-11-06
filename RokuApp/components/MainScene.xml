@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="MainScene" extends="Scene">
+    <children>
+        <Rectangle color="#101014" width="1920" height="1080" />
+        <Label id="logo" text="Metadata Browser" translation="[40,60]" width="260" font="font:MediumBoldSystemFont" color="#E50914" />
+        <LabelList id="nav" translation="[30,180]" itemSize="[250,64]" numRows="8" />
+        <Group id="content" translation="[320,0]" />
+        <Group id="overlay" />
+    </children>
+    <script type="text/brightscript" uri="pkg:/components/MainScene.brs" />
+</component>

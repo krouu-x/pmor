@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="OptionItem" extends="Group">
+    <interface>
+        <field id="itemContent" type="assocarray" />
+    </interface>
+    <children>
+        <Rectangle id="bg" color="#2A2A3A" width="100%" height="50" />
+        <Rectangle id="focusBg" color="#FFC107" width="100%" height="50" opacity="0" />
+        <Label id="titleLabel" translation="[20,8]" width="95%" height="34" font="font:SmallSystemFont" color="#FFFFFF" />
+    </children>
+    <script type="text/brightscript" uri="pkg:/components/OptionItem.brs" />
+</component>

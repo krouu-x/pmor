@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="DetailScreen" extends="Group">
+    <interface>
+        <field id="target" type="assocarray" onChange="onTarget" />
+        <field id="request" type="assocarray" />
+        <function name="focusMe" />
+    </interface>
+    <children>
+        <Rectangle color="#101014" width="1920" height="1080" />
+        <Poster id="bg" width="1920" height="1080" loadDisplayMode="scaleToZoom" />
+        <Rectangle color="#101014" width="1920" height="1080" opacity="0.82" />
+        <Poster id="poster" translation="[80,60]" width="280" height="420" loadDisplayMode="scaleToZoom" />
+        <Button id="watch" translation="[80,490]" text="Play" minWidth="280" maxWidth="280" height="56" />
+        <Button id="play" translation="[380,490]" text="Play Trailer" minWidth="280" maxWidth="280" height="56" />
+        <Label id="dfav" translation="[680,505]" width="340" font="font:SmallestSystemFont" color="#FFC107" />
+        <Label id="pmsg" translation="[1040,505]" width="800" font="font:SmallestSystemFont" color="#FF8A80" />
+        <Label id="dtitle" translation="[400,60]" width="1440" font="font:LargeBoldSystemFont" color="#FFFFFF" />
+        <Label id="dsub" translation="[400,130]" width="1440" font="font:SmallestSystemFont" color="#A0A0AA" />
+        <Label id="dmeta" translation="[400,168]" width="1440" font="font:SmallSystemFont" color="#FFC107" />
+        <Label id="dgenres" translation="[400,210]" width="1440" font="font:SmallSystemFont" color="#E0E0E8" />
+        <Label id="dover" translation="[400,260]" width="1440" height="170" wrap="true" maxLines="5" lineSpacing="6" font="font:SmallSystemFont" color="#D0D0D8" />
+        <Label id="dinfo" translation="[400,440]" width="1440" height="60" wrap="true" maxLines="2" font="font:SmallestSystemFont" color="#B0B0BA" />
+        <RowList id="rows" translation="[40,545]" numRows="1" itemComponentName="PosterCard" itemSize="[1840,440]" itemSpacing="[0,20]" rowItemSize="[[240,400]]" rowItemSpacing="[[10,0]]" showRowLabel="[true]" rowLabelOffset="[[20,0]]" focusXOffset="[20]" rowFocusAnimationStyle="floatingFocus" />
+        <Label id="msg" translation="[400,300]" width="1200" wrap="true" font="font:MediumSystemFont" color="#FF8A80" />
+        <Label id="attr" translation="[80,1035]" width="1700" font="font:SmallestSystemFont" color="#6A6A78" text="This product uses the TMDB API but is not endorsed or certified by TMDB.  Press * to add/remove favorite." />
+    </children>
+    <script type="text/brightscript" uri="pkg:/components/DetailScreen.brs" />
+    <script type="text/brightscript" uri="pkg:/source/config.brs" />
+    <script type="text/brightscript" uri="pkg:/source/cache.brs" />
+    <script type="text/brightscript" uri="pkg:/source/navigation.brs" />
+</component>

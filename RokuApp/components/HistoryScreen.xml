@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="HistoryScreen" extends="Group">
+    <interface>
+        <field id="target" type="assocarray" onChange="onTarget" />
+        <field id="request" type="assocarray" />
+        <function name="focusMe" />
+    </interface>
+    <children>
+        <Rectangle color="#101014" width="1920" height="1080" />
+        <Label translation="[80,50]" text="Watch history" font="font:LargeBoldSystemFont" color="#FFFFFF" />
+        <LabelList id="list" translation="[80,150]" itemSize="[1760,64]" numRows="12" />
+        <Label id="msg" translation="[80,160]" width="1500" font="font:MediumSystemFont" color="#A0A0AA" />
+    </children>
+    <script type="text/brightscript" uri="pkg:/components/HistoryScreen.brs" />
+    <script type="text/brightscript" uri="pkg:/source/config.brs" />
+    <script type="text/brightscript" uri="pkg:/source/cache.brs" />
+    <script type="text/brightscript" uri="pkg:/source/navigation.brs" />
+</component>

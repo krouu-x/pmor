@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="BrowseScreen" extends="Group">
+    <interface>
+        <field id="mode" type="string" onChange="onMode" />
+        <field id="request" type="assocarray" />
+        <function name="focusMe" />
+        <function name="refresh" />
+    </interface>
+    <children>
+        <Poster id="bg" width="1600" height="900" loadDisplayMode="scaleToZoom" />
+        <Rectangle color="#101014" width="1600" height="1080" opacity="0.65" />
+        <Label id="ftitle" translation="[60,70]" width="1400" font="font:LargeBoldSystemFont" color="#FFFFFF" />
+        <Label id="fmeta" translation="[60,150]" width="1400" font="font:MediumSystemFont" color="#FFC107" />
+        <Label id="fover" translation="[60,205]" width="1050" height="150" wrap="true" maxLines="4" lineSpacing="6" font="font:SmallSystemFont" color="#D0D0D8" />
+        <RowList id="rows" translation="[20,380]" numRows="2" itemComponentName="PosterCard" itemSize="[1560,440]" itemSpacing="[0,20]" rowItemSize="[[240,400]]" rowItemSpacing="[[10,0]]" showRowLabel="[true]" rowLabelOffset="[[20,0]]" focusXOffset="[20]" rowFocusAnimationStyle="floatingFocus" />
+        <Label id="msg" translation="[60,400]" width="1400" wrap="true" font="font:MediumSystemFont" color="#FF8A80" />
+        <Label id="attr" translation="[60,1030]" width="1500" font="font:SmallestSystemFont" color="#6A6A78" text="This product uses the TMDB API but is not endorsed or certified by TMDB." />
+    </children>
+    <script type="text/brightscript" uri="pkg:/components/BrowseScreen.brs" />
+    <script type="text/brightscript" uri="pkg:/source/config.brs" />
+    <script type="text/brightscript" uri="pkg:/source/cache.brs" />
+    <script type="text/brightscript" uri="pkg:/source/navigation.brs" />
+</component>

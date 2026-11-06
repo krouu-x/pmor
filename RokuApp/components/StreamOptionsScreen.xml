@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<component name="StreamOptionsScreen" extends="Group">
+    <interface>
+        <field id="target" type="assocarray" onChange="onTarget" />
+        <field id="request" type="assocarray" />
+        <function name="focusMe" />
+    </interface>
+    <children>
+        <Rectangle color="#101014" width="1920" height="1080" opacity="0.95" />
+        <Rectangle color="#202028" width="800" height="800" translation="[560,140]" />
+        <Label translation="[600,160]" width="720" text="Select Stream" font="font:LargeBoldSystemFont" color="#FFFFFF" />
+
+        <Label id="streamLabel" translation="[600,240]" width="720" text="Available Streams:" font="font:MediumSystemFont" color="#FFC107" />
+        <MarkupGrid id="streamGrid" translation="[600,280]" itemComponentName="StreamItem" itemSize="[720,60]" numColumns="1" numRows="5" itemSpacing="[0,10]" />
+
+        <Label id="audioLabel" translation="[600,580]" width="720" text="Audio Language:" font="font:MediumSystemFont" color="#FFC107" />
+        <MarkupGrid id="audioGrid" translation="[600,620]" itemComponentName="OptionItem" itemSize="[720,50]" numColumns="1" numRows="5" itemSpacing="[0,5]" />
+
+        <Label id="subtitleLabel" translation="[600,860]" width="720" text="Subtitles:" font="font:MediumSystemFont" color="#FFC107" />
+        <MarkupGrid id="subtitleGrid" translation="[600,900]" itemComponentName="OptionItem" itemSize="[720,50]" numColumns="1" numRows="4" itemSpacing="[0,5]" />
+
+        <Button id="playBtn" translation="[1000,960]" text="Play" minWidth="200" height="50" />
+        <Button id="cancelBtn" translation="[1220,960]" text="Cancel" minWidth="200" height="50" />
+    </children>
+    <script type="text/brightscript" uri="pkg:/components/StreamOptionsScreen.brs" />
+    <script type="text/brightscript" uri="pkg:/source/config.brs" />
+    <script type="text/brightscript" uri="pkg:/source/navigation.brs" />
+</component>
